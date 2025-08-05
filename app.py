@@ -19,6 +19,13 @@ def main():
     documents = load_pdf(file_path)
     chunks = split_Document(documents)
     qdrant_manager.add_to_qdrant(chunks, collection_name)
+
+
+
+
+
+
+    
     
     usr_in = input("Do you want to clear the database(y/n): ")
     if usr_in.lower() == 'y':

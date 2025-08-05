@@ -69,7 +69,7 @@ class Qdrant_manager:
         except Exception as e:
             print(f"❌ Failed to delete collection '{collection_name}': {e}")
 
-    def search_similar(self, query: str, collection_name="gemini_embeddings", limit=5):
+    def search_similar(self, query: str, collection_name="gemini_embeddings", limit=10):
         """Search for similar documents"""
         query_vector = self.embeddings.embed_query(query)
         
