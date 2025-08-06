@@ -18,7 +18,7 @@ def get_embedding_function(mod = 1):
         embeddings = GoogleGenerativeAIEmbeddings(
             model="models/embedding-001",
             max_retries=3,
-            timeout=120,  # Increased timeout to handle potential delays
+            timeout=120,
         )
     else:
         raise ValueError("Invalid embedding mode specified.")
